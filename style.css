@@ -1,34 +1,117 @@
-/* Estilos del menú de navegación */
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/* Encabezado */
+header {
+    background: #007BFF;
+    color: white;
+    padding: 20px;
+}
+
+/* 🚀 Menú de navegación en fila */
 nav {
     position: sticky;
     top: 0;
-    background: #333;
-    padding: 10px 0;
+    background: #222;  /* Color oscuro elegante */
     width: 100%;
     z-index: 1000;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+    gap: 30px; /* Espacio entre elementos */
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 15px;
-    display: inline-block;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
 }
 
 nav ul li a:hover {
     background: #007BFF;
-    border-radius: 5px;
+    transform: scale(1.1); /* Efecto al pasar el mouse */
+}
+
+/* 🚀 Secciones con mejor diseño */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.bloque {
+    background: white;
+    padding: 25px;
+    width: 23%;
+    min-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bloque:hover {
+    transform: translateY(-5px);
+}
+
+/* 🚀 Mejor estilo de títulos */
+h2 {
+    color: #007BFF;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* 🚀 Botones y enlaces */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 🚀 Responsive para móviles */
+@media screen and (max-width: 800px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    .bloque {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
