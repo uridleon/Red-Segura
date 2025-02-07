@@ -1,117 +1,55 @@
 /* Estilo general */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
     text-align: center;
     scroll-behavior: smooth;
 }
 
-/* Encabezado */
-header {
-    background: #007BFF;
-    color: white;
-    padding: 20px;
-}
-
-/* 🚀 Menú de navegación en fila */
-nav {
-    position: sticky;
-    top: 0;
-    background: #222;  /* Color oscuro elegante */
-    width: 100%;
-    z-index: 1000;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Espacio entre elementos */
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-nav ul li a:hover {
-    background: #007BFF;
-    transform: scale(1.1); /* Efecto al pasar el mouse */
-}
-
-/* 🚀 Secciones con mejor diseño */
+/* Contenedor principal */
 .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
+/* Tarjetas con mejor estilo */
 .bloque {
-    background: white;
-    padding: 25px;
-    width: 23%;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    padding: 30px;
+    width: 22%;
     min-width: 250px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
 }
 
 .bloque:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* 🚀 Mejor estilo de títulos */
-h2 {
-    color: #007BFF;
+/* Títulos de cada tarjeta */
+.bloque h2 {
     font-size: 22px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* 🚀 Botones y enlaces */
-a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* 🚀 Responsive para móviles */
+/* Responsive: Columnas en móviles */
 @media screen and (max-width: 800px) {
     .contenedor {
         flex-direction: column;
+        align-items: center;
     }
+
     .bloque {
         width: 90%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
-        text-align: center;
     }
 }
