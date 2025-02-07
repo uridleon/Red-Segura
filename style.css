@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
+    scroll-behavior: smooth; /* Hace el desplazamiento suave */
 }
 
 header {
@@ -12,9 +13,43 @@ header {
     padding: 20px;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    background: #333;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #007BFF;
+    border-radius: 5px;
+}
+
 .contenedor {
     display: flex;
-    flex-wrap: wrap; /* Permite que las secciones bajen en pantallas pequeñas */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     padding: 20px;
@@ -23,10 +58,11 @@ header {
 .bloque {
     background: white;
     padding: 20px;
-    width: 23%; /* Tamaño de cada bloque */
+    width: 23%;
     min-width: 200px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Para evitar que el menú cubra el contenido al saltar */
 }
 
 h2 {
@@ -46,7 +82,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive: cuando la pantalla es pequeña, los bloques se apilan */
+/* Responsive: en pantallas pequeñas, los bloques se apilan */
 @media screen and (max-width: 800px) {
     .contenedor {
         flex-direction: column;
